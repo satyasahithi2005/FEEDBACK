@@ -1,0 +1,222 @@
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* Container for Feedback Manager */
+  .container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Main Title */
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color:green;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+  }
+  
+  /* Feedback Form */
+  .feedback-form {
+    margin-bottom: 30px;
+    color:green;
+  }
+  
+  .feedback-form h3 {
+    font-size: 1.6rem;
+    color:green;
+    margin-bottom: 20px;
+  }
+  
+  .feedback-form input,
+  .feedback-form button,
+  .feedback-form textarea {
+    padding: 12px 18px;
+    font-size: 16px;
+    margin: 10px 0;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 480px; /* Limit the width of the form */
+    box-sizing: border-box;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+  }
+  
+  /* Input focus effect */
+  .feedback-form input:focus,
+  .feedback-form textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+  }
+  
+  /* Placeholder styling */
+  .feedback-form input::placeholder,
+  .feedback-form textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  /* Star Rating */
+  .star-rating {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+  }
+  
+  .star-rating .star {
+    font-size: 30px;
+    color: #ccc;
+    margin: 0 8px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .star-rating .star.selected {
+    color: #f39c12; /* Gold color */
+  }
+  
+  .star-rating .star:hover,
+  .star-rating .star.selected:hover {
+    color: #f39c12;
+    transform: scale(1.2);
+  }
+  
+  /* Feedback List */
+  .feedback-list {
+    margin-top: 30px;
+    text-align: left;
+  }
+  
+  .feedback-list p {
+    font-size: 1.2rem;
+    color: #777;
+    font-style: italic;
+  }
+  
+  /* Feedback Cards */
+  .feedback-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .feedback-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Feedback Card Info */
+  .feedback-info {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .feedback-info .name {
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  
+  .feedback-info .rating {
+    color: #f39c12;
+    font-size: 1.4rem;
+  }
+  
+  /* Feedback Card Actions (Edit/Delete) */
+  .feedback-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .feedback-actions button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .feedback-actions .edit-btn {
+    background-color: #f1c40f;
+    color: #fff;
+  }
+  
+  .feedback-actions .edit-btn:hover {
+    background-color: #f39c12;
+    transform: translateY(-2px);
+  }
+  
+  .feedback-actions .delete-btn {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  .feedback-actions .delete-btn:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+  }
+  
+  .feedback-actions .delete-btn:focus,
+  .feedback-actions .edit-btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feedback-actions button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+      width: 90%;
+    }
+  
+    .feedback-form input,
+    .feedback-form button,
+    .feedback-form textarea {
+      font-size: 14px;
+     
+    }
+  
+    .star-rating {
+      font-size: 25px;
+    }
+  
+    .feedback-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .feedback-actions {
+      margin-top: 10px;
+      justify-content: flex-start;
+    }
+  
+    .feedback-actions button {
+      margin: 5px 0;
+    }
+  }
+  
